@@ -244,7 +244,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     imageNumbers.forEach((imageIndex, i) => {
-        const url = `./img/photo${imageIndex}.JPG`; //AQUÍ TAMBIÉN PUEDO MODIFICAR CREO XD
+        const url = `./img/photo${imageIndex}.jpg`; //AQUÍ TAMBIÉN PUEDO MODIFICAR CREO XD
         checkImageExists(url, (exists) => {
             if (exists) {
                 // Lógica para agregar la imagen al carrusel
@@ -261,7 +261,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const img = document.createElement("img");
-        img.src = `./img/photo${imageIndex}.JPG`; // Ruta de las imágenes
+        img.src = `/img/photo${imageIndex}.jpg`; // Ruta de las imágenes
         img.alt = `Imagen destacada ${imageIndex}`; // Descripción accesible
         img.loading = "lazy"; // Activar lazy loading
         img.classList.add("d-block", "w-100", "img-fluid");
