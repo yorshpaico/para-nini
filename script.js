@@ -244,7 +244,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     imageNumbers.forEach((imageIndex, i) => {
-        const url = `/img/photo${imageIndex}.jpg`;
+        const url = `./img/photo${imageIndex}.jpg`;
         checkImageExists(url, (exists) => {
             if (exists) {
                 // Lógica para agregar la imagen al carrusel
