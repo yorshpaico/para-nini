@@ -244,7 +244,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     imageNumbers.forEach((imageIndex, i) => {
-        const url = `../img/photo${imageIndex}.jpg`; //AQUÍ TAMBIÉN PUEDO MODIFICAR CREO XD
+        const url = `./img/photo${imageIndex}.jpg`; //AQUÍ TAMBIÉN PUEDO MODIFICAR CREO XD
         checkImageExists(url, (exists) => {
             if (exists) {
                 // Lógica para agregar la imagen al carrusel
