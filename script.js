@@ -261,7 +261,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const img = document.createElement("img");
-        img.src = `/img/photo${imageIndex}.JPG`; // Ruta de las imágenes
+        img.src = `./img/photo${imageIndex}.JPG`; // Ruta de las imágenes
         img.alt = `Imagen destacada ${imageIndex}`; // Descripción accesible
         img.loading = "lazy"; // Activar lazy loading
         img.classList.add("d-block", "w-100", "img-fluid");
