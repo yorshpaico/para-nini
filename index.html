@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web especial con un álbum de fotos, poema y acróstico.">
+    <meta name="author" content="Pedro Paico">
+    <title>Álbum Especial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header class="py-4">
+        <h1>Álbum virtual de nuestros momentos más resaltantes del año 2023 - 2024 💖</h1>
+        <p>Un espacio lleno de amor y recuerdos inolvidables junto a tí.</p>
+    </header>
+
+<!-- Música de fondo y controles -->
+<section id="musica" class="py-4">
+    <audio id="backgroundMusic">
+        <source src="audio/cancion1.mp3" type="audio/mpeg">  
+    </audio>
+
+    <div>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
+    </div>
+    <div class="text-center">
+
+        
+        <!-- Botones de avanzar, pausar y retroceder --> 
+        <button id="repeatButton" class="btn">
+            <i class="fas fa-redo"></i>
+        </button>
+        
+        <button id="shuffleButton" class="btn">
+            <i class="fas fa-random"></i>
+        </button>
+
+        <button id="prevButton"><i class="fas fa-backward"></i></button>
+        <button id="playPauseButton"><i class="fas fa-play"></i></button>
+        <button id="nextButton"><i class="fas fa-forward"></i></button>
+    </div>
+  </section>
+
+    <!-- Carrusel de fotos dinámico -->
+     
+<section id="carrusel" class="py-4">
+  <h2 class="text-center">Momentos memorables contigo :3</h2>
+  <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div id="carouselPhrase" class="text-center mt-3"></div>
+
+         
+        
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+      </button>
+  </div>
+</section>
+
+
+<!-- Contenedor del botón debajo del carrusel -->
+<div class="carta-container">
+    <button class="carta-button" id="verCartaBtn">Ver Carta</button>
+</div>
+
+<!-- Contenedor que se ocultará o mostrará al hacer clic -->
+<div id="cartaContent" style="display:none;">
+
+    <p>
+        <p> Mi querida Nini</p>
+
+       <p>Al cerrar este año que termina, no puedo evitar sonreír al recordar cada momento que hemos compartido. </p>   
+        
+        <p>Este primer año a tu lado ha sido una aventura maravillosa, llena de risas, complicidad y mucho amor. Gracias por ser tan linda conmigo, por tu paciencia, tu alegría y por la forma tan especial en que me haces sentir.</p>
+        
+       <p>Cada día a tu lado es un regalo, y me siento increíblemente afortunado de tenerte en mi vida.</p>  
+       
+       <p>Gracias por ser mi compañera, mi confidente y mi mejor amiga. </p>
+       
+       <p>Te deseo un feliz año nuevo, mi amor. Que este nuevo año que comienza esté lleno de momentos inolvidables juntos, de sueños cumplidos y de un amor que siga creciendo cada día más.</p>
+        
+        <p>Eres una persona increíble, Nini.  Eres hermosa, inteligente, divertida y tienes un corazón de oro. Me inspiras a ser mejor persona y me llenas de felicidad con tan solo una sonrisa. Te amo con todo mi ser.</p>
+        
+       <p>Con todo mi amor,</p> 
+        
+        <p>Tu Tilín, Pedrito </p>
+    </p>
+</div>
+
+
+        <!-- Acróstico -->
+        <section id="acrostico" class="py-4">
+            <h2>Acróstico :3</h2>
+            <p><strong>N</strong>unca olvidaré los momentos juntos.<br>
+               <strong>I</strong>nfinito amor en cada instante.<br>
+               <strong>C</strong>onstruimos recuerdos únicos.<br>
+               <strong>O</strong>ramos por un futuro brillante.<br>
+               <strong>L</strong>lenos de felicidad y esperanza.<br>
+               <strong>E</strong>res mi todo, mi gran amor.</p>
+        </section>
+
+        <!-- Poema -->
+        <section id="poema" class="py-4">
+            <h2>Un corto poema pa tú de mí :v</h2>
+            <blockquote>
+                <p>
+                    En tus ojos hallé mi hogar,<br>
+                    en tus abrazos, mi calma.<br>
+                    Cada día contigo,<br>
+                    es un verso en mi alma.
+                </p>
+                <footer>— Para mi alfajorcita linda</footer>
+            </blockquote>
+        </section>
+    </main>
+
+    <footer class="py-3">
+        <p>Con mucho amor, tu Tilín 💕</p>
+    </footer>
+
+    <!-- Modal de bienvenida -->
+    <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="welcomeModalLabel">¡Bienvenida! 💖</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Este es un espacio especial lleno de amor y recuerdos de todo este año mi amor. ¡Espero que te guste y la canción también jsdjsdjs! 😊</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">¡Aceptar OwO!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
